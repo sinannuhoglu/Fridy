@@ -118,11 +118,11 @@ The object detection model used in this project is a **custom-trained YOLOv8** m
 
 <table>
   <tr>
-    <td><img width="495" height="319" alt="Image1" src="https://github.com/user-attachments/assets/2a9ab570-bcf6-471b-b8d3-0b0d42b71a33" /></td>
-    <td><img width="495" height="319" alt="Image2" src="https://github.com/user-attachments/assets/56148219-80b3-4ea4-896f-ae225ab06892" /></td>
+    <td><img width="495" height="319" alt="Image" src="https://github.com/user-attachments/assets/68f8e7ec-4c88-4fec-b7d0-08f873b45366" /></td>
+    <td><img width="495" height="319" alt="Image" src="https://github.com/user-attachments/assets/3f553f9c-2e3d-423c-b078-a6e18098f5d6" /></td>
   </tr>
   <tr>
-    <td><img width="495" height="319" alt="Image3" src="https://github.com/user-attachments/assets/25f842bf-79b8-405e-ba99-cb50a5b94127" /></td>
-    <td><img width="495" height="319" alt="Image4" src="https://github.com/user-attachments/assets/7dfcf85d-4e1e-428e-8af6-43b008b353bb" /></td>
+    <td><img width="495" height="319" alt="Image" src="https://github.com/user-attachments/assets/29b3cd5e-d82a-4c36-acc5-e4a54fc89e03" /></td>
+    <td><img width="495" height="319" alt="Image" src="https://github.com/user-attachments/assets/011bc6ea-21c4-4c3f-bef1-59167c297d66" /></td>
   </tr>
 </table>
