@@ -1,2 +1,128 @@
-# Fridy
-Android food assistant that leverages image processing techniques with a custom-trained YOLOv8 model to detect fridge items and generate meal recipes, including AI-generated images and voice playback. Built using Jetpack Compose, MVVM, Retrofit, Hilt and TensorFlow Lite.
+# Fridy - Smart Food Assistant App
+
+Fridy is an Android application that helps users identify the ingredients in their fridge using computer vision techniques and generates meal recipes based on those ingredients. It uses a custom-trained YOLOv8 object detection model to process images and detect food items, which are then passed through a prompt to generate rich, structured recipes using AI-powered language models. It also creates visual illustrations of meals and supports text-to-speech for reading the recipes aloud.
+
+Built with modern Android technologies including Jetpack Compose, MVVM architecture, Hilt, Retrofit, and TensorFlow Lite.
+
+---
+
+## Screenshots
+
+| Home Screen        | Detection Screen      | Fridge Screen         | Detail Screen        | Recipe Screen        |
+|--------------------|------------------------|------------------------|------------------------|------------------------|
+| <img width="1194" height="2532" alt="Image" src="https://github.com/user-attachments/assets/837e9724-1398-4197-8525-1a966c6d4e78" /> | <img width="1194" height="2532" alt="Image" src="https://github.com/user-attachments/assets/51a0093e-45ca-49e7-a18e-cd85c3d433f5" /> | <img width="1194" height="2532" alt="Image" src="https://github.com/user-attachments/assets/acfc4565-d4b7-455b-a635-f9d80f528949" /> | <img width="1194" height="2532" alt="Image" src="https://github.com/user-attachments/assets/1b6f4e17-8c35-4e48-9d11-d34fd59a5ab0" /> | <img width="1194" height="2532" alt="Image" src="https://github.com/user-attachments/assets/90e11fc6-d6f6-4653-be63-6e8473681fea" /> |
+
+---
+
+## Project Structure
+
+```
+com.sinannuhoglu.fridy/
+├── camera/
+│   ├── CameraScreen.kt             # Object detection screen. Uses YOLOv8 to detect items in an image.
+│   ├── CameraViewModel.kt          # Manages detection logic and state.
+│   └── YoloV8Classifier.kt         # Runs YOLOv8 TensorFlow model and performs classification.
+│
+├── data.remote/
+│   ├── AIService.kt                # Defines API interface for recipe and image generation.
+│   └── RetrofitClient.kt           # Retrofit setup (Timeouts, Base URL, etc.).
+│
+├── detail/
+│   └── DetailFragment.kt           # Collects meal type and note to generate recipe request.
+│
+├── di/
+│   └── YoloModule.kt               # Hilt module for injecting YoloV8Classifier.
+│
+├── fridge/
+│   ├── FridgeScreen.kt             # Displays and selects detected items.
+│   └── FridgeViewModel.kt          # Groups and manages selected fridge items.
+│
+├── home/
+│   ├── HomeScreen.kt               # Entry screen for image selection or camera.
+│   └── HomeViewModel.kt            # Handles image temp file, loading state, and navigation.
+│
+├── model/                          # Data models including DetectionResult, FridgeItem, RecipeUiState.
+│   
+│
+├── navigation/
+│   └── BottomNavGraph.kt           # Sets up screen navigation.
+│
+├── recipes/
+│   ├── RecipeResultScreen.kt       # Displays recipe results, image, and TTS button.
+│   ├── RecipesViewModel.kt         # Handles recipe/image fetching, error and state management.
+│   └── TextToSpeechManager.kt      # Manages TTS initialization and playback.
+│
+├── shared/
+│   └── SharedViewModel.kt          # Shared data like selected image URI and items across screens.
+│
+├── ui/
+│   ├── components/                 # Reusable UI components (buttons, cards, etc.).
+│   └── theme/                      # Theme and color settings.
+│
+├── util/
+│   ├── Constants.kt               # API keys and constants.
+│   ├── ParseRecipeContent.kt      # Converts recipe text into RecipeUiState.
+│   └── RecipeUtils.kt             # Prompt builders and helpers for AI input.
+│
+├── FridyApplication.kt            # Application entry point with Hilt support.
+└── MainActivity.kt                # Hosts Scaffold, NavController, and global theme.
+```
+
+---
+## Features
+
+| Feature                    | Description |
+|---------------------------|-------------|
+| Image-based object detection | Detects food items from gallery or camera images using YOLOv8 and TFLite. |
+| Item grouping and selection | Groups similar items and allows users to choose which ones to use. |
+| Meal type and notes input   | Users can specify meal types (breakfast, lunch, dinner) and add extra notes. |
+| Recipe generation using AI  | Uses AI to create creative and structured recipes based on selected items. |
+| Image generation using AI   | Generates a realistic food image based on the recipe. |
+| Text-to-Speech (TTS)        | Reads the recipe aloud in Turkish using Android's TTS engine. |
+| Jetpack Compose UI          | Fully built with Compose and modern UI components. |
+
+---
+
+## Tech Stack
+
+| Technology         | Purpose |
+|--------------------|---------|
+| Jetpack Compose    | Declarative UI toolkit for Android |
+| Hilt               | Dependency injection |
+| Retrofit & Gson    | Networking and JSON serialization |
+| Kotlin Coroutines  | Asynchronous tasks |
+| TensorFlow Lite    | Running YOLOv8 model on-device |
+| Custom-trained YOLOv8 | Used for image-based ingredient detection |
+| AI API (Chat & Image) | Generates recipe content and visuals |
+| TextToSpeech API   | For reading recipes aloud |
+| Coil               | For image loading |
+| Lottie             | Animations |
+
+---
+
+## Screen Flow
+
+| Screen              | Description |
+|---------------------|-------------|
+| **HomeScreen**      | Lets user select image from gallery or take a new photo |
+| **CameraScreen**    | Detects objects from image using YOLOv8 and displays detection results |
+| **FridgeScreen**    | Displays detected items, allows selection and grouping |
+| **DetailFragment**  | Collects meal type and additional note for recipe generation |
+| **RecipeResultScreen** | Displays AI-generated recipe and image with option to listen via TTS |
+
+---
+
+## Model Information
+
+The object detection model used in this project is a **custom-trained YOLOv8** model. Training was done using annotated food images, and the final model was converted into TFLite format for mobile use. Accuracy of the detection is high, with nearly 100% detection and over 97% classification accuracy in test images.
+
+<table>
+  <tr>
+    <td><img width="495" height="319" alt="Image1" src="https://github.com/user-attachments/assets/2a9ab570-bcf6-471b-b8d3-0b0d42b71a33" /></td>
+    <td><img width="495" height="319" alt="Image2" src="https://github.com/user-attachments/assets/56148219-80b3-4ea4-896f-ae225ab06892" /></td>
+  </tr>
+  <tr>
+    <td><img width="495" height="319" alt="Image3" src="https://github.com/user-attachments/assets/25f842bf-79b8-405e-ba99-cb50a5b94127" /></td>
+    <td><img width="495" height="319" alt="Image4" src="https://github.com/user-attachments/assets/7dfcf85d-4e1e-428e-8af6-43b008b353bb" /></td>
+  </tr>
+</table>
