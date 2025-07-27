@@ -10,7 +10,7 @@ Built with modern Android technologies including Jetpack Compose, MVVM architect
 
 | Home Screen        | Detection Screen      | Fridge Screen         | Detail Screen        | Recipe Screen        |
 |--------------------|------------------------|------------------------|------------------------|------------------------|
-| <img width="1194" height="2532" alt="Image" src="https://github.com/user-attachments/assets/837e9724-1398-4197-8525-1a966c6d4e78" /> | <img width="1194" height="2532" alt="Image" src="https://github.com/user-attachments/assets/51a0093e-45ca-49e7-a18e-cd85c3d433f5" /> | <img width="1194" height="2532" alt="Image" src="https://github.com/user-attachments/assets/acfc4565-d4b7-455b-a635-f9d80f528949" /> | <img width="1194" height="2532" alt="Image" src="https://github.com/user-attachments/assets/1b6f4e17-8c35-4e48-9d11-d34fd59a5ab0" /> | <img width="1194" height="2532" alt="Image" src="https://github.com/user-attachments/assets/90e11fc6-d6f6-4653-be63-6e8473681fea" /> |
+| <img width="1194" height="2532" alt="Image" src="https://github.com/user-attachments/assets/79995a6d-b4b0-4c26-8f40-ce9fa1a51d63" /> | <img width="1194" height="2532" alt="Image" src="https://github.com/user-attachments/assets/8702db23-bc9c-4ef9-af00-ea804b3b487c" /> | <img width="1194" height="2532" alt="Image" src="https://github.com/user-attachments/assets/8ec19c4b-c0cc-4f7d-9dab-36189bc117fa" /> | <img width="1194" height="2532" alt="Image" src="https://github.com/user-attachments/assets/abba6de6-f33e-4077-87a3-9f4b27b246f9" /> | <img width="1194" height="2532" alt="Image" src="https://github.com/user-attachments/assets/ede01104-f415-4e22-a869-bd19e2dc6902" /> |
 
 ---
 
