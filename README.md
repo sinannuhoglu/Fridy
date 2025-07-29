@@ -2,7 +2,7 @@
 
 Fridy is an Android application that helps users identify the ingredients in their fridge using computer vision techniques and generates meal recipes based on those ingredients. It uses a custom-trained YOLOv8 object detection model to process images and detect food items, which are then passed through a prompt to generate rich, structured recipes using AI-powered language models. It also creates visual illustrations of meals and supports text-to-speech for reading the recipes aloud.
 
-Built with modern Android technologies including Jetpack Compose, MVVM architecture, Hilt, Retrofit, and TensorFlow Lite.
+Built with modern Android technologies including Jetpack Compose, MVVM architecture, Hilt, Retrofit and TensorFlow Lite.
 
 ---
 
@@ -39,7 +39,7 @@ com.sinannuhoglu.fridy/
 │
 ├── home/
 │   ├── HomeScreen.kt               # Entry screen for image selection or camera.
-│   └── HomeViewModel.kt            # Handles image temp file, loading state, and navigation.
+│   └── HomeViewModel.kt            # Handles image temp file, loading state and navigation.
 │
 ├── model/                          # Data models including DetectionResult, FridgeItem, RecipeUiState.
 │   
@@ -48,7 +48,7 @@ com.sinannuhoglu.fridy/
 │   └── BottomNavGraph.kt           # Sets up screen navigation.
 │
 ├── recipes/
-│   ├── RecipeResultScreen.kt       # Displays recipe results, image, and TTS button.
+│   ├── RecipeResultScreen.kt       # Displays recipe results, image and TTS button.
 │   ├── RecipesViewModel.kt         # Handles recipe/image fetching, error and state management.
 │   └── TextToSpeechManager.kt      # Manages TTS initialization and playback.
 │
@@ -65,7 +65,7 @@ com.sinannuhoglu.fridy/
 │   └── RecipeUtils.kt             # Prompt builders and helpers for AI input.
 │
 ├── FridyApplication.kt            # Application entry point with Hilt support.
-└── MainActivity.kt                # Hosts Scaffold, NavController, and global theme.
+└── MainActivity.kt                # Hosts Scaffold, NavController and global theme.
 ```
 
 ---
@@ -114,7 +114,7 @@ com.sinannuhoglu.fridy/
 
 ## Model Information
 
-The object detection model used in this project is a **custom-trained YOLOv8** model. Training was done using annotated food images, and the final model was converted into TFLite format for mobile use. Accuracy of the detection is high, with nearly 100% detection and over 97% classification accuracy in test images.
+The object detection model used in this project is a **custom-trained YOLOv8** model. Training was done using annotated food images and the final model was converted into TFLite format for mobile use. Accuracy of the detection is high, with nearly 100% detection and over 97% classification accuracy in test images.
 
 <table>
   <tr>
