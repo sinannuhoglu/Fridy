@@ -114,7 +114,7 @@ com.sinannuhoglu.fridy/
 
 ## Model Information
 
-This project leverages a **custom-trained YOLOv8 model** specifically tailored for detecting food items within a refrigerator environment. Designed with mobile deployment in mind, the model has been converted to **TensorFlow Lite (TFLite)** format to ensure efficient, real-time performance on edge devices.
+This project leverages a **custom-trained YOLOv8 model** specifically tailored for detecting food items within a refrigerator environment. Designed with mobile deployment in mind, the model has been converted to TensorFlow Lite (TFLite) format to ensure efficient, real-time performance on edge devices.
 
 The training process was carried out using a meticulously annotated dataset and enriched with a variety of visual conditions—such as different lighting setups, camera angles and image qualities—to improve the model’s generalization to real-world scenarios.
 
@@ -122,8 +122,8 @@ Thanks to these optimizations, the model delivers fast and accurate predictions 
 
 ### Performance
 
-- **Object Detection Accuracy**: Nearly 100%  
-- **Classification Accuracy**: Above 97%  
+- Object Detection Accuracy: Nearly 100%  
+- Classification Accuracy: Above 97%  
 - Consistent and robust performance across various food categories and environmental conditions.
 
 ### Model Predictions
