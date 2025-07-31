@@ -114,7 +114,19 @@ com.sinannuhoglu.fridy/
 
 ## Model Information
 
-The object detection model used in this project is a **custom-trained YOLOv8** model. Training was done using annotated food images and the final model was converted into TFLite format for mobile use. Accuracy of the detection is high, with nearly 100% detection and over 97% classification accuracy in test images.
+This project leverages a **custom-trained YOLOv8 model** specifically tailored for detecting food items within a refrigerator environment. Designed with mobile deployment in mind, the model has been converted to **TensorFlow Lite (TFLite)** format to ensure efficient, real-time performance on edge devices.
+
+The training process was carried out using a meticulously annotated dataset and enriched with a variety of visual conditions—such as different lighting setups, camera angles, and image qualities—to improve the model’s generalization to real-world scenarios.
+
+Thanks to these optimizations, the model delivers fast and accurate predictions on mobile platforms, maintaining high reliability across diverse use cases.
+
+### Performance
+
+- **Object Detection Accuracy**: Nearly 100%  
+- **Classification Accuracy**: Above 97%  
+- Consistent and robust performance across various food categories and environmental conditions.
+
+### Model Predictions
 
 <table>
   <tr>
