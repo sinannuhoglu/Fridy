@@ -28,7 +28,7 @@ com.sinannuhoglu.fridy/
 │   └── RetrofitClient.kt           # Retrofit setup (Timeouts, Base URL, etc.).
 │
 ├── detail/
-│   └── DetailFragment.kt           # Collects meal type and note to generate recipe request.
+│   └── DetailScreen.kt             # Collects meal type and note to generate recipe request.
 │
 ├── di/
 │   └── YoloModule.kt               # Hilt module for injecting YoloV8Classifier.
@@ -107,7 +107,7 @@ com.sinannuhoglu.fridy/
 | **HomeScreen**      | Lets user select image from gallery or take a new photo |
 | **CameraScreen**    | Detects objects from image using YOLOv8 and displays detection results |
 | **FridgeScreen**    | Displays detected items, allows selection and grouping |
-| **DetailFragment**  | Collects meal type and additional note for recipe generation |
+| **DetailScreen**  | Collects meal type and additional note for recipe generation |
 | **RecipeResultScreen** | Displays AI-generated recipe and image with option to listen via TTS |
 
 ---
@@ -116,7 +116,7 @@ com.sinannuhoglu.fridy/
 
 This project leverages a **custom-trained YOLOv8 model** specifically tailored for detecting food items within a refrigerator environment. Designed with mobile deployment in mind, the model has been converted to **TensorFlow Lite (TFLite)** format to ensure efficient, real-time performance on edge devices.
 
-The training process was carried out using a meticulously annotated dataset and enriched with a variety of visual conditions—such as different lighting setups, camera angles, and image qualities—to improve the model’s generalization to real-world scenarios.
+The training process was carried out using a meticulously annotated dataset and enriched with a variety of visual conditions—such as different lighting setups, camera angles and image qualities—to improve the model’s generalization to real-world scenarios.
 
 Thanks to these optimizations, the model delivers fast and accurate predictions on mobile platforms, maintaining high reliability across diverse use cases.
 
